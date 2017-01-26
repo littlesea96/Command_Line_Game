@@ -5,6 +5,6 @@ package io.muic.ooc.homework2.CommandLineGame;
  */
 public class Main {
     public static void main(String[] args) {
-        
+
     }
 }
