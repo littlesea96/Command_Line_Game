@@ -36,12 +36,13 @@ public class Main {
         String name = scanner.nextLine();
         player.setName(name);
 
-//        Lv1Controller lv1 = new Lv1Controller();
-//        lv1.start(player);
+        Lv1Controller lv1 = new Lv1Controller();
+        lv1.start(player);
 
         Lv2Controller lv2 = new Lv2Controller();
         lv2.start(player);
 
-
+        Lv3Controller lv3 = new Lv3Controller();
+        lv3.start(player);
     }
 }

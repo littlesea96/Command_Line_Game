@@ -4,30 +4,19 @@ import Monster.Monster;
 import item.*;
 
 import java.util.ArrayList;
-import java.util.StringJoiner;
+import java.util.List;
 
 /**
  * Created by Sea on 1/30/17.
  */
 public class Room {
-
-    private String name;
-
     private Room northExit = null;
     private Room southExit = null;
     private Room eastExit = null;
     private Room westExit = null;
-    private ArrayList<Item> items = new ArrayList<>();
-    private ArrayList<Monster> monsters = new ArrayList<Monster>();
+    private List<Item> items = new ArrayList<>();
+    private ArrayList<Monster> monsters = new ArrayList<>();
     private boolean exitRoom = false;
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
 
     public void addItem(Item item){
         items.add(item);
@@ -50,8 +39,12 @@ public class Room {
         }
     }
 
-    public ArrayList<Item> getItems() {
+    public List<Item> getItems() {
         return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 
     public Room getNorthExit() {
