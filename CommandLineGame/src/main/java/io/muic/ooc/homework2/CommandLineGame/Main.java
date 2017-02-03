@@ -11,21 +11,6 @@ import java.util.Scanner;
  * Created by Sea on 1/25/17.
  */
 public class Main {
-    private static final HashMap<String, Command> commands = new HashMap<String, Command>() {
-        {
-            put("info", new InfoCommand());
-            put("quit", new QuitCommand());
-            put("go", new GoCommand());
-            put("take", new TakeCommand());
-            put("use", new UseCommand());
-            put("attackWith", new AttackWithCommand());
-
-        }
-    };
-
-    public static Command getCommand(String name) {
-        return commands.get(name);
-    }
 
     public static void main(final String[] arguments) {
         Scanner scanner = new Scanner(System.in);
