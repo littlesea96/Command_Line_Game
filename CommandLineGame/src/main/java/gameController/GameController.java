@@ -19,6 +19,8 @@ public abstract class GameController {
             put("take", new TakeCommand());
             put("use", new UseCommand());
             put("attackWith", new AttackWithCommand());
+            put("help", new HelpCommand());
+
 
         }
     };

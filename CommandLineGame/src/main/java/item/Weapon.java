@@ -30,14 +30,6 @@ public class Weapon extends Item{
         if(monster.death()){
             room.getMonsters().remove(0);
             System.out.println("monster is killed");
-//            Iterator<Monster> iterator = room.getMonsters().iterator();
-//            while (iterator.hasNext()){
-//                Monster monster1 = iterator.next();
-//                if(monster.getName().equals(monster1.getName())){
-//                    iterator.remove();
-//                }
-//
-//            }
         } else {
             System.out.println("Monster Hp: " + monster.getHp());
             System.out.println("Your hp: " + player.getHp());
