@@ -15,7 +15,7 @@ public class MapLv2Factory implements MapFactory{
     @Override
     public Room[] createRoom() {
         Room[] rooms = new Room[6];
-        for (int i = 0; i <= 6; i++) {
+        for (int i = 0; i < 6; i++) {
             rooms[i] = new Room();
         }
         return rooms;

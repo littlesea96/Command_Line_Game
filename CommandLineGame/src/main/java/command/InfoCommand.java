@@ -13,10 +13,5 @@ public class InfoCommand implements Command {
         Room room = player.getCurrentRoom();
         player.getInfo();
         room.getInfo();
-//        System.out.println("cur " + room);
-//        System.out.println("north " + room.getNorthExit());
-//        System.out.println("south " + room.getSouthExit());
-//        System.out.println("east " + room.getEastExit());
-//        System.out.println("west " + room.getWestExit());
     }
 }

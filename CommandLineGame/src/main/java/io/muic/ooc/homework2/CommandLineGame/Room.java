@@ -24,10 +24,6 @@ public class Room {
 
     public void getInfo(){
         System.out.println("Room info");
-        System.out.println("north " + northExit);
-        System.out.println("south " + southExit);
-        System.out.println("east " + eastExit);
-        System.out.println("west " + westExit);
         System.out.println("Items in the room:");
         for (Item item: items) {
             System.out.println(item.getName());

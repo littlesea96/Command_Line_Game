@@ -16,7 +16,7 @@ public class MapLv1Factory implements MapFactory {
     @Override
     public Room[] createRoom() {
         Room[] rooms = new Room[5];
-        for (int i = 0; i <= 5; i++) {
+        for (int i = 0; i < 5; i++) {
             rooms[i] = new Room();
         }
         return rooms;
@@ -50,13 +50,13 @@ public class MapLv1Factory implements MapFactory {
         items.add(potion);
 
         Item potion1 = new Potion(50);
-        potion.setName("bluePotion");
-        potion.setType("potion");
+        potion1.setName("bluePotion");
+        potion1.setType("potion");
         items.add(potion1);
 
         Item potion2 = new Potion(100);
-        potion.setName("goldPotion");
-        potion.setType("potion");
+        potion2.setName("goldPotion");
+        potion2.setType("potion");
         items.add(potion2);
 
         Item weapon = new Weapon(45);
@@ -65,8 +65,8 @@ public class MapLv1Factory implements MapFactory {
         items.add(weapon);
 
         Item weapon1 = new Weapon(25);
-        weapon.setName("knife");
-        weapon.setType("weapon");
+        weapon1.setName("knife");
+        weapon1.setType("weapon");
         items.add(weapon1);
 
         return items;

@@ -5,6 +5,7 @@ import item.*;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 
 /**
@@ -15,7 +16,7 @@ public class TakeCommand implements Command {
     @Override
     public void apply(Player player, String[] args) {
         Room curRoom = player.getCurrentRoom();
-        ArrayList<Item> items = curRoom.getItems();
+        List<Item> items = curRoom.getItems();
         Iterator<Item> iterator = items.iterator();
 
         while (iterator.hasNext()){

@@ -13,7 +13,6 @@ import java.util.Scanner;
 public class Main {
     private static final HashMap<String, Command> commands = new HashMap<String, Command>() {
         {
-            // commands are added here using lambdas. It is also possible to dynamically add commands without editing the code.
             put("info", new InfoCommand());
             put("quit", new QuitCommand());
             put("go", new GoCommand());

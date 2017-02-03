@@ -16,8 +16,11 @@ public class UseCommand implements Command {
 
         while (iterator.hasNext()){
             Item item = iterator.next();
-            if(item.getType().equals("potion")){
+            if(item.getType().equals("potion") && item.getName().equals(args[0])){
                 item.use(player);
+                iterator.remove();
+                System.out.println("use " + args[0]);
+                System.out.println("Hp: " + player.getHp());
             }
             break;
         }

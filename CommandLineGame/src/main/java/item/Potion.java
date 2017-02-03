@@ -16,7 +16,6 @@ public class Potion extends Item{
     public void use(Player player) {
         int curHp = player.getHp();
         player.setHp(curHp + hp);
-//        System.out.println("hp: " + curHp + hp);
     }
 
     public int getHp() {
