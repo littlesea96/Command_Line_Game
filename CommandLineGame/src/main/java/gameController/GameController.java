@@ -1,16 +1,15 @@
-package io.muic.ooc.homework2.CommandLineGame;
+package gameController;
 
 import command.*;
-import gameController.*;
+import io.muic.ooc.homework2.CommandLineGame.GameMap;
+import io.muic.ooc.homework2.CommandLineGame.Player;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Scanner;
 
 /**
- * Created by Sea on 1/25/17.
+ * Created by Sea on 2/3/17.
  */
-public class Main {
+public abstract class GameController {
     private static final HashMap<String, Command> commands = new HashMap<String, Command>() {
         {
             // commands are added here using lambdas. It is also possible to dynamically add commands without editing the code.
@@ -28,20 +27,9 @@ public class Main {
         return commands.get(name);
     }
 
-    public static void main(final String[] arguments) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Hello, command me!!");
-        System.out.print("Enter your name: ");
-        Player player = new Player();
-        String name = scanner.nextLine();
-        player.setName(name);
+    public abstract void start(Player player);
 
-//        Lv1Controller lv1 = new Lv1Controller();
-//        lv1.start(player);
-
-        Lv2Controller lv2 = new Lv2Controller();
-        lv2.start(player);
+    public abstract boolean objMet(Player player, GameMap gameMap);
 
 
-    }
 }
