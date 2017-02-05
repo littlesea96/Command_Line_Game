@@ -98,12 +98,14 @@ public class MapLv3Factory implements MapFactory{
     @Override
     public GameMap create(Player player) {
         Room[] rooms = createRoom();
-        ArrayList<Monster> monsters = createMonster();
+        ArrayList<Monster> monsters = new ArrayList<>();
         List<Item> items = createItem();
 
         connectRooms(rooms);
+        ArrayList<Monster> monEachRoom = createMonster();
         for (Room room: rooms) {
-            addMonsters(monsters, room);
+            addMonsters(monEachRoom, room);
+            monsters.addAll(monEachRoom);
         }
 
         addItems(items, rooms[0]);

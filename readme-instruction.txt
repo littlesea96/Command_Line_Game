@@ -1,3 +1,5 @@
+**You need to take items, both potion and weapon, to your bag before use
+
 Commands:
 info    print out the player Hp, Exp, all items in bag
         print out all monsters and items in the room

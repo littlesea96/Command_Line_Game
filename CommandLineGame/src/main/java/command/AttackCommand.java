@@ -1,27 +1,24 @@
-package item;
+package command;
 
-import Monster.*;
+import Monster.Monster;
 import io.muic.ooc.homework2.CommandLineGame.Player;
 import io.muic.ooc.homework2.CommandLineGame.Room;
+import item.Item;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * Created by Sea on 1/30/17.
+ * Created by Sea on 2/5/17.
  */
-public class Weapon extends Item{
-    private int attackPower = 0;
-
-    public Weapon(int attackPower) {
-        this.attackPower = attackPower;
-    }
+public class AttackCommand implements Command{
 
     @Override
-    public void use(Player player) {
+    public void apply(Player player, String[] args) {
         Room room = player.getCurrentRoom();
         Monster monster = room.getMonsters().get(0);
         int monsterHp = monster.getHp();
-        monster.setHp(monsterHp - attackPower);
+        monster.setHp(monsterHp - player.getAttackPower());
         double curExp = player.getExp();
         player.setExp(curExp*1.1);
 
@@ -37,13 +34,5 @@ public class Weapon extends Item{
             System.out.println("Your hp: " + player.getHp());
         }
 
-    }
-
-    public int getAttackPower() {
-        return attackPower;
-    }
-
-    public void setAttackPower(int attackPower) {
-        this.attackPower = attackPower;
     }
 }

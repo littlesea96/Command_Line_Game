@@ -14,7 +14,6 @@ public class AttackWithCommand implements Command{
     @Override
     public void apply(Player player, String[] args) {
         Room room = player.getCurrentRoom();
-//        Monster monster = room.getMonsters().get(0);
         ArrayList<Item> bag = player.getBag();
         Iterator<Item> iterator = bag.iterator();
         boolean found = false;

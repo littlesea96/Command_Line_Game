@@ -42,8 +42,8 @@ public class MapLv2Factory implements MapFactory{
         items.add(weapon);
 
         Item weapon1 = new Weapon(25);
-        weapon.setName("knife");
-        weapon.setType("weapon");
+        weapon1.setName("knife");
+        weapon1.setType("weapon");
         items.add(weapon1);
 
         return items;
@@ -79,12 +79,14 @@ public class MapLv2Factory implements MapFactory{
     @Override
     public GameMap create(Player player) {
         Room[] rooms = createRoom();
-        ArrayList<Monster> monsters = createMonster();
+        ArrayList<Monster> monsters = new ArrayList<>();
         List<Item> items = createItem();
 
         connectRooms(rooms);
         for (Room room: rooms) {
-            addMonsters(monsters, room);
+            ArrayList<Monster> monEachRoom = createMonster();
+            addMonsters(monEachRoom, room);
+            monsters.addAll(monEachRoom);
         }
 
         addItems(items, rooms[0]);

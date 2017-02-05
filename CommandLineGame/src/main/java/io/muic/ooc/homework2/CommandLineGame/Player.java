@@ -11,7 +11,7 @@ public class Player {
 
     private String name;
     private double exp = 0.0;
-    private int hp = 70;
+    private int hp = 100;
     private int attackPower = 10;
     private Room currentRoom = null;
     private ArrayList<Item> bag = new ArrayList<>();

@@ -12,7 +12,6 @@ import java.util.HashMap;
 public abstract class GameController {
     private static final HashMap<String, Command> commands = new HashMap<String, Command>() {
         {
-            // commands are added here using lambdas. It is also possible to dynamically add commands without editing the code.
             put("info", new InfoCommand());
             put("quit", new QuitCommand());
             put("go", new GoCommand());
@@ -20,8 +19,7 @@ public abstract class GameController {
             put("use", new UseCommand());
             put("attackWith", new AttackWithCommand());
             put("help", new HelpCommand());
-
-
+            put("attack", new AttackCommand());
         }
     };
 
